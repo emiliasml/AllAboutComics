@@ -1,0 +1,104 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <title>AllAboutComics</title>
+  </head>
+  <body bgcolor="#ffd9b3">
+    <!-- header -->
+    <div>
+      <img src="../assets/logo.jpg" alt="Logo" height="30" />
+      <h2>All about comics</h2>
+      <h2>
+        <em>the place where the true fans of the comics come together</em>
+      </h2>
+      <span>
+        <h5>Main Page</h5>
+      </span>
+    </div>
+    <!-- end of the header -->
+
+    <!-- menu -->
+    <div>
+      <ul>
+        <li><a href="discover.html">Discover</a></li>
+        <li><a href="login.html">Logout</a></li>
+      </ul>
+    </div>
+    <!-- end of the menu -->
+
+    <!-- main content -->
+    <hr />
+
+    <div align="center">
+      <h3>Your opinion matters to us!</h3>
+
+      <label for="country">Where are you from?</label>
+      <input
+        type="text"
+        id="country"
+        name="country"
+        value="Romania"
+        size="10"
+        readonly
+      /><br /><br />
+      <label for="name">Your name:</label>
+      <input type="text" id="name" />
+      <br />
+
+      <p>Please select your age:</p>
+      <input type="radio" id="age1" name="age" value="1" checked />
+      <label for="age1">0 - 10</label><br />
+      <input type="radio" id="age2" name="age" value="2" />
+      <label for="age2">10 - 20</label><br />
+      <input type="radio" id="age3" name="age" value="3" />
+      <label for="age3">20 - 30</label><br />
+      <input type="radio" id="age4" name="age" value="4" />
+      <label for="age3"> > 30</label><br /><br />
+
+      <label for="feelings">What do you think about our services?</label>
+      <select id="feelings">
+        <option value="happy">Happy</option>
+        <option value="sad">Sad</option>
+        <option value="angry">Angry</option>
+        <option value="like" selected>Big like!</option>
+      </select>
+
+      <br /><br />
+
+      <span>What do you usually read?</span>
+      <br />
+      <input type="checkbox" id="category1" name="categories" value="10" />
+      <label for="category1">Comics</label>
+      <input type="checkbox" id="category2" name="categories" value="20" />
+      <label for="category2">Manga</label>
+      <input type="checkbox" id="category1" name="categories" value="30" />
+      <label for="category3">Graphic novels</label>
+
+      <br /><br />
+
+      <label for="booksRead">How many books have you read from here?</label>
+      <input type="number" id="booksRead" name="booksRead" step="1" />
+
+      <br /><br />
+      <form accept-charset="utf-8">
+        <label for="reviewBox">What do you want to tell us?</label>
+        <br />
+        <textarea id="reviewBox" rows="5" cols="50"></textarea>
+        <br /><br />
+
+        <label for="files"
+          >Do you want to send us files? Upload them here:</label
+        >
+        <br />
+        <input type="file" id="files" name="files" multiple />
+      </form>
+      <input type="submit" value="Submit" disabled />
+    </div>
+    <!-- end of the main content -->
+
+    <!-- footer -->
+    <br />
+    <div>&copy; Emilia Simulescu</div>
+    <!-- end of the footer -->
+  </body>
+</html>
