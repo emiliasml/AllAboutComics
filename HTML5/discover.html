@@ -1,144 +1,145 @@
 <!DOCTYPE html>
-<html>
+<html lang="ro">
   <head>
     <title>AllAboutComics</title>
+    <meta charset="utf-8" />
   </head>
+
   <body>
     <!-- header -->
-    <div>
-      <img src="../assets/logo.jpg" alt="Logo" width="50" id="top" />
+    <header>
+      <img src="../assets/logo.jpg" alt="Logo" height="30" />
+
       <h2>All about comics</h2>
-    </div>
+    </header>
     <!-- end of the header -->
 
     <!-- menu -->
-    <div>
-      <ul>
-        <li><a href="login.html">Login</a></li>
-        <li><a href="signup.html">Sign up</a></li>
-        <li><a href="main-page.html">Main page</a></li>
-      </ul>
-    </div>
+    <nav>
+      <a href="login.html">Login</a>
+      <br />
+      <a href="signup.html">Sign up</a>
+      <br />
+      <a href="main-page.html">Main page</a>
+    </nav>
     <!-- end of the menu -->
 
     <!-- main content -->
-    <div>
-      <label for="search">Search:</label>
-      <input id="search" type="search" />
-
-      <h2>Categories</h2>
-      <p>
-        <b>Comics</b> have been written in a variety of styles and genres, to
-        suit every taste. <br />Here are just some of the many genres to be
-        found in today's comics
-      </p>
-      <ol type="i">
-        <li>
-          <strong>Comics</strong>
-          <dd>These are a few predominate types of comic book types:</dd>
-          <ol>
-            <li>Superhero</li>
-            <li>Slice-of-Life</li>
-            <li>Humor</li>
-            <li>Non-fiction</li>
-            <li>Science-Fiction/Fantasy</li>
-            <li>Horror</li>
-          </ol>
-        </li>
-        <!-- lista inauntrul unui li sau dupa el? -->
-        <li><strong>Graphic novels</strong></li>
-        <dd>There are five predominant types of graphic novel:</dd>
-        <ol start="7">
-          <li>Manga</li>
-          <li>Superhero Stories</li>
-          <li>Non-superhero Stories</li>
-          <li>Personal Narratives</li>
-          <li>Non-fiction</li>
+    <main>
+      <div>
+        <label for="search">Search:</label>
+        <input id="search" type="text" />
+        <section>
+          <h2>Categories</h2>
+          <p>
+            <b>Comics</b> have been written in a variety of styles and genres,
+            to suit every taste. <br />Here are just some of the many genres to
+            be found in today's comics
+          </p>
+        </section>
+        <ol type="i">
+          <li>
+            <strong>Comics</strong>
+            <ol>
+              <li>Superhero</li>
+              <li>Slice-of-Life</li>
+              <li>Humor</li>
+              <li>Non-fiction</li>
+              <li>Science-Fiction/Fantasy</li>
+              <li>Horror</li>
+            </ol>
+          </li>
+          <li>
+            <strong>Graphic novels</strong>
+            <ol start="7">
+              <li>Manga</li>
+              <li>Superhero Stories</li>
+              <li>Non-superhero Stories</li>
+              <li>Personal Narratives</li>
+              <li>Non-fiction</li>
+            </ol>
+          </li>
+          <li>
+            <strong>Manga</strong>
+            <ol start="12">
+              <li>Action</li>
+              <li>Adventure</li>
+              <li>Comedy</li>
+              <li>Drama</li>
+              <li>Cooking</li>
+              <li>Horror</li>
+              <li>Slice of life</li>
+              <li>Fantasy</li>
+              <li>Harem/Reverse harem</li>
+              <li>Magic</li>
+              <li>Supernatural</li>
+              <li>Mystery</li>
+              <li>Psychological</li>
+              <li>Romance</li>
+              <li>Sci-Fi</li>
+              <li>Sports</li>
+            </ol>
+          </li>
         </ol>
-        <li><strong>Manga</strong></li>
-        <dd>Common Genres:</dd>
-        <ol start="12">
-          <li>Action</li>
-          <li>Adventure</li>
-          <li>Comedy</li>
-          <li>Drama</li>
-          <li>Cooking</li>
-          <li>Horror</li>
-          <li>Slice of life</li>
-          <li>Fantasy</li>
-          <li>Harem/Reverse harem</li>
-          <li>Magic</li>
-          <li>Supernatural</li>
-          <li>Mystery</li>
-          <li>Psychological</li>
-          <li>Romance</li>
-          <li>Sci-Fi</li>
-          <li>Sports</li>
-        </ol>
-      </ol>
-    </div>
+      </div>
 
-    <table border="1" width="100px" cellpadding="10">
-      <tr>
-        <th>Author(s)</th>
-        <th>Title</th>
-        <th>Year</th>
-        <th>Publisher</th>
-        <th>Category</th>
-      </tr>
-      <tr>
-        <td>Stan Lee</td>
-        <td>Spider Man</td>
-        <td>1956</td>
-        <td>MCU</td>
-        <td>Superhero</td>
-      </tr>
-      <tr>
-        <td>Art Spiegelman</td>
-        <td>Maus</td>
-        <td valign="top">2012</td>
-        <td>Grafic Art</td>
-        <td>Graphic novel</td>
-      </tr>
-      <tr>
-        <td rowspan="2">Masashi Kishimoto</td>
-        <td>
-          <table>
-            <tr>
-              <th colspan="2">Naruto</th>
-            </tr>
-            <tr>
-              <td>1 -</td>
-              <td>72</td>
-            </tr>
-          </table>
-        </td>
-        <td>1999-2014</td>
-        <td rowspan="2">Shueisha</td>
-        <td rowspan="2">Manga</td>
-      </tr>
-      <tr>
-        <td>
-          <table>
-            <tr>
-              <th colspan="2">Boruto</th>
-            </tr>
-            <tr>
-              <td>1 -</td>
-              <td>16</td>
-            </tr>
-          </table>
-        </td>
-        <td>2016-2022</td>
-      </tr>
-    </table>
-
+      <table>
+        <tr>
+          <th>Author(s)</th>
+          <th>Title</th>
+          <th>Year</th>
+          <th>Publisher</th>
+          <th>Category</th>
+        </tr>
+        <tr>
+          <td>Stan Lee</td>
+          <td>Spider Man</td>
+          <td>1956</td>
+          <td>MCU</td>
+          <td>Superhero</td>
+        </tr>
+        <tr>
+          <td>Art Spiegelman</td>
+          <td>Maus</td>
+          <td>2012</td>
+          <td>Grafic Art</td>
+          <td>Graphic novel</td>
+        </tr>
+        <tr>
+          <td rowspan="2">Masashi Kishimoto</td>
+          <td>
+            <table>
+              <tr>
+                <th colspan="2">Naruto</th>
+              </tr>
+              <tr>
+                <td>1 -</td>
+                <td>72</td>
+              </tr>
+            </table>
+          </td>
+          <td>1999-2014</td>
+          <td rowspan="2">Shueisha</td>
+          <td rowspan="2">Manga</td>
+        </tr>
+        <tr>
+          <td>
+            <table>
+              <tr>
+                <th colspan="2">Boruto</th>
+              </tr>
+              <tr>
+                <td>1 -</td>
+                <td>16</td>
+              </tr>
+            </table>
+          </td>
+          <td>2016-2022</td>
+        </tr>
+      </table>
+    </main>
     <!-- end of the main content -->
 
-    <!-- footer -->
-    <div>&copy; Emilia Simulescu</div>
-    <div align="right"><a href="#top">Go up</a></div>
-
-    <!-- end of the footer -->
+    <footer>&copy; Emilia Simulescu</footer>
   </body>
 </html>
