@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <title>AllAboutComics</title>
+    <link rel="stylesheet" type="text/css" href="../style/style.css" />
+    <meta charset="utf-8" />
+    <script type="text/javascript" src="../scripts/script.js"></script>
+  </head>
+  <body>
+    <!-- header -->
+    <header>
+      <nav>
+        <ul class="navList">
+          <li class="leftLi">
+            <img id="logo" src="../assets/logo.jpg" alt="Logo" height="30" />
+          </li>
+          <li class="leftLi"><h2 id="AAC">All about comics</h2></li>
+          <li class="rightLi"><a href="discover.html">Discover</a></li>
+          <li class="rightLi"><a href="login.html">Login</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- end of the header -->
+
+    <!-- main content -->
+    <main>
+      <div class="login">
+        <form
+          name="signUpForm"
+          onsubmit="return signUpValidate()"
+          action="./main-page.html"
+        >
+          <h3>SIGN UP</h3>
+          <table class="loginTable">
+            <tr>
+              <td>
+                <label for="username">Choose username:</label>
+              </td>
+              <td>
+                <input
+                  type="text"
+                  id="username"
+                  name="username"
+                  maxlength="12"
+                />
+              </td>
+              <td>
+                <div id="messageUsername">
+                  <p id="validationBulletUsername" class="invalid"></p>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <label for="phone">Enter phone number:</label>
+              </td>
+              <td>
+                <input type="text" id="phone" name="phone" />
+              </td>
+              <td>
+                <div id="messagePhone">
+                  <p id="validationBulletPhone" class="invalid" required></p>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <label for="email">E-mail:</label>
+              </td>
+              <td><input type="text" id="email" name="email" /></td>
+              <td>
+                <div id="messageEmail">
+                  <p id="validationBulletEmail" class="invalid"></p>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="birthDate">Birthdate:</label>
+              </td>
+              <td>
+                <input
+                  type="date"
+                  id="birthDate"
+                  name="birthDate"
+                  max="2022-01-01"
+                />
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="password">Choose password:</label>
+              </td>
+              <td>
+                <input type="password" id="psw" name="psw" />
+              </td>
+              <td>
+                <div id="message">
+                  <p id="validationBullet" class="invalid"></p>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <label for="confirmPassword">Confirm password:</label>
+              </td>
+              <td>
+                <input
+                  type="password"
+                  id="confirmPassword"
+                  name="confirmPassword"
+                />
+              </td>
+            </tr>
+          </table>
+          <div id="errorMessage">
+            <p id="validationMessage" class="noError"></p>
+          </div>
+
+          <input type="submit" class="loginBtn" value="SIGN UP" />
+          <a href="login.html">
+            <input
+              type="button"
+              class="signUpBtn"
+              value="Do you have an account?"
+          /></a>
+        </form>
+      </div>
+    </main>
+    <!-- end of the main content -->
+    <footer class="footer">
+      <h5>the place where the true fans of the comics come together</h5>
+      <p>&copy; Emilia Simulescu</p>
+    </footer>
+
+    <script>
+      var passwordInput = document.getElementById("psw");
+
+      // When the user clicks on the password field, show the message box
+      passwordInput.onfocus = function () {
+        document.getElementById("message").style.display = "block";
+      };
+
+      // When the user starts to type something inside the password field
+      passwordInput.onkeyup = function () {
+        var lowerCaseLetters = /[a-z]/g;
+        var upperCaseLetters = /[A-Z]/g;
+        var exclamationMark = /[!]/g;
+        var numbers = /[0-9]/g;
+        if (
+          passwordInput.value.match(lowerCaseLetters) &&
+          passwordInput.value.match(numbers) &&
+          passwordInput.value.match(exclamationMark) &&
+          passwordInput.value.match(upperCaseLetters) &&
+          passwordInput.value.match(upperCaseLetters)
+        ) {
+          validationBullet.classList.remove("invalid");
+          validationBullet.classList.add("valid");
+        } else {
+          validationBullet.classList.remove("valid");
+          validationBullet.classList.add("invalid");
+        }
+      };
+
+      var emailInput = document.getElementById("email");
+
+      emailInput.onfocus = function () {
+        document.getElementById("messageEmail").style.display = "block";
+      };
+
+      emailInput.onkeyup = function () {
+        var emailReg = /^[a-zA-Z0-9_]+@[a-zA-Z0-9_]*\.[a-zA-Z0-9_]*/g;
+        if (emailInput.value.match(emailReg)) {
+          validationBulletEmail.classList.remove("invalid");
+          validationBulletEmail.classList.add("valid");
+        } else {
+          validationBulletEmail.classList.remove("valid");
+          validationBulletEmail.classList.add("invalid");
+        }
+      };
+
+      var usernameInput = document.getElementById("username");
+
+      // When the user clicks on the password field, show the message box
+      usernameInput.onfocus = function () {
+        document.getElementById("messageUsername").style.display = "block";
+      };
+
+      usernameInput.onkeyup = function () {
+        var usernameReg = /^[a-z0-9]+$/g;
+        if (usernameInput.value.match(usernameReg)) {
+          validationBulletUsername.classList.remove("invalid");
+          validationBulletUsername.classList.add("valid");
+        } else {
+          validationBulletUsername.classList.remove("valid");
+          validationBulletUsername.classList.add("invalid");
+        }
+      };
+
+      var phoneInput = document.getElementById("phone");
+
+      // When the user clicks on the password field, show the message box
+      phoneInput.onfocus = function () {
+        document.getElementById("messagePhone").style.display = "block";
+      };
+
+      phoneInput.onkeyup = function () {
+        var phoneReg = /^\(\+40\)[0-9]{9}$/g;
+        if (phoneInput.value.match(phoneReg)) {
+          validationBulletPhone.classList.remove("invalid");
+          validationBulletPhone.classList.add("valid");
+        } else {
+          validationBulletPhone.classList.remove("valid");
+          validationBulletPhone.classList.add("invalid");
+        }
+      };
+
+      function signUpValidate() {
+        if (
+          passwordInput.value == "" ||
+          emailInput.value == "" ||
+          usernameInput == "" ||
+          phoneInput.value == ""
+        ) {
+          validationMessage.classList.remove("noError");
+          validationMessage.classList.add("error");
+          return false;
+        }
+        return true;
+      }
+    </script>
+  </body>
+</html>

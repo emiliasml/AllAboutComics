@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <title>AllAboutComics</title>
+    <link rel="stylesheet" type="text/css" href="../style/style.css" />
+    <meta name="description" content="Everything about comics" />
+    <meta name="author" content="Emilia Simulescu" />
+    <meta charset="utf-8" />
+    <link
+      href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css"
+      rel="stylesheet"
+    />
+    <script type="text/javascript" src="../scripts/script.js"></script>
+  </head>
+  <body>
+    <!-- header -->
+    <header>
+      <nav>
+        <ul class="navList">
+          <li class="leftLi">
+            <img id="logo" src="../assets/logo.jpg" alt="Logo" height="30" />
+          </li>
+          <li class="leftLi"><h2 id="AAC">All about comics</h2></li>
+
+          <li class="rightLi"><a href="discover.html">Discover</a></li>
+          <li class="rightLi"><a href="signup.html">Signup</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- end of the header -->
+
+    <!-- main content -->
+    <main>
+      <fieldset id="loginFieldset">
+        <legend>Welcome back!</legend>
+        <table class="loginTable">
+          <tr>
+            <td>
+              <i class="icon-user loginIcon"></i>
+              <label id="usernameLabel" for="username">Username:</label>
+            </td>
+            <td>
+              <input type="text" id="username" name="username" />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <i class="icon-lock loginIcon"></i>
+              <label id="passwordLabel" for="password">Password:</label>
+            </td>
+            <td>
+              <input type="password" id="password" name="password" />
+            </td>
+          </tr>
+        </table>
+        <a href="main-page.html" target="_blank">
+          <input type="button" class="loginBtn" value="LOG IN"
+        /></a>
+        <br />
+        <a href="signup.html">
+          <input
+            type="button"
+            class="signUpBtn"
+            value="Don't you have an account?"
+        /></a>
+      </fieldset>
+    </main>
+    <!-- end of the main content -->
+
+    <footer class="footer">
+      <h5>the place where the true fans of the comics come together</h5>
+      <p>&copy; Emilia Simulescu</p>
+    </footer>
+  </body>
+</html>

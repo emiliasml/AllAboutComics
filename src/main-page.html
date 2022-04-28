@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>AllAboutComics</title>
+    <link rel="stylesheet" type="text/css" href="../style/style.css" />
+    <meta charset="utf-8" />
+    <script type="text/javascript" src="../scripts/script.js"></script>
+    <script src="jquery.min.js"></script>
+  </head>
+  <body>
+    <!-- header -->
+    <header>
+      <nav>
+        <ul class="navList">
+          <li class="leftLi">
+            <img id="logo" src="../assets/logo.jpg" alt="Logo" height="30" />
+          </li>
+          <li class="leftLi"><h2 id="AAC">All about comics</h2></li>
+          <li class="rightLi"><a href="discover.html">Discover</a></li>
+          <li class="rightLi"><a href="login.html">Logout</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- end of the header -->
+
+    <!-- main content -->
+
+    <main>
+      <div class="container">
+        <a href="#">
+          <img class="big featured" src="../assets/slider/main.jpg" />
+        </a>
+
+        <a href="#">
+          <img class="thumb" src="../assets/slider/thumb1.jpg" />
+          <img class="big" src="../assets/slider/slide1.jpg" />
+        </a>
+
+        <a href="#">
+          <img class="thumb" src="../assets/slider/thumb2.jpg" />
+          <img class="big" src="../assets/slider/slide2.jpg" />
+        </a>
+
+        <a href="#">
+          <img class="thumb" src="../assets/slider/thumb3.jpg" />
+          <img class="big" src="../assets/slider/slide3.jpg" />
+        </a>
+
+        <a href="#">
+          <img class="thumb" src="../assets/slider/thumb4.jpg" />
+          <img class="big" src="../assets/slider/slide4.jpg" />
+        </a>
+      </div>
+
+      <details>
+        <summary>Before you start</summary>
+        <p>
+          Welcome to the world of Comics, Graphic Novels, and Manga! Here you
+          can find information of each of these graphic forms, give suggested
+          readers, and provide reference material to get your research started.
+        </p>
+      </details>
+
+      <article>
+        <h2>Let's begin</h2>
+        <p>
+          Although most people think of superheroes when they think of comic
+          books, there are many other genres for collectors to enjoy. Aside from
+          superhero, the main genres of comic books are: alternative/esoteric,
+          manga, science fiction, fantasy, comedy, action/adventure, horror,
+          humor, romance, children's, and adult. Superhero comics are most
+          popular in the United States. Superhero comic books are similar to
+          modern day mythology, with fantastical settings and characters with
+          superhuman powers and abilities.
+        </p>
+        <aside>
+          <p>
+            Examples of superhero comics include Wonder Woman, X-Men, Superman,
+            Spiderman, and Batman.
+          </p>
+        </aside>
+      </article>
+      <article>
+        <h3>Action Comic Books</h3>
+        <p>
+          Action/adventure comic books usually involve characters that do not
+          have special powers. Rather, they are everyday people experiencing a
+          conflict. Most of the characters, however, are detectives or police,
+          and the story focuses on their battles against criminals.
+        </p>
+      </article>
+      <h3>Manga</h3>
+      <p>
+        Manga comic books are Japanese. In the United States, these books are
+        translated into English. With the popularity of these comic books, the
+        style is often also produced in countries other than in Japan. Manga is
+        the most well known comic book type worldwide.
+      </p>
+      <figure>
+        <img src="../assets/comics.jpg" alt="comics_image" />
+        <figcaption>Superhero Comics</figcaption>
+      </figure>
+
+      <hr />
+      <div class="opinionDiv">
+        <h3>Your opinion matters to us!</h3>
+
+        <form>
+          <label for="country">Where are you from?</label>
+          <input
+            type="text"
+            id="country"
+            name="country"
+            value="Romania"
+            size="10"
+            readonly
+          />
+
+          <select
+            id="dropdown1"
+            onchange="judetSelectat()"
+            name="judete"
+          ></select>
+
+          <!-- Status: -->
+          <select id="dropdown2" name="orase"></select>
+        </form>
+        <br /><br />
+        <label for="name">Your name:</label>
+        <input type="text" id="name" />
+        <br />
+
+        <p>Please select your age:</p>
+        <input type="radio" id="age1" name="age" value="1" checked />
+        <label for="age1">0 - 10</label><br />
+        <input type="radio" id="age2" name="age" value="2" />
+        <label for="age2">10 - 20</label><br />
+        <input type="radio" id="age3" name="age" value="3" />
+        <label for="age3">20 - 30</label><br />
+        <input type="radio" id="age4" name="age" value="4" />
+        <label for="age3"> > 30</label><br /><br />
+
+        <label for="feeling">What do you think about our services?</label>
+        <input list="feelings" name="feeling" id="feeling" />
+        <datalist id="feelings">
+          <option value="happy"></option>
+          <option value="sad"></option>
+          <option value="angry"></option>
+          <option value="like"></option>
+        </datalist>
+        <br /><br />
+
+        <span>What do you usually read?</span>
+        <br />
+        <input type="checkbox" id="category1" name="categories" value="10" />
+        <label for="category1">Comics</label>
+        <input type="checkbox" id="category2" name="categories" value="20" />
+        <label for="category2">Manga</label>
+        <input type="checkbox" id="category3" name="categories" value="30" />
+        <label for="category3">Graphic novels</label>
+
+        <br /><br />
+
+        <label for="booksRead">How many books have you read from here?</label>
+        <input type="number" id="booksRead" name="booksRead" step="1" />
+
+        <br /><br />
+        <form accept-charset="utf-8" action="/action_page.php">
+          <label for="reviewBox">What do you want to tell us?</label>
+          <br />
+          <textarea id="reviewBox" placeholder="Type here..."></textarea>
+          <br /><br />
+
+          <select multiple name="drawfs" id="drawfs">
+            <option>Grumpy</option>
+            <option>Happy</option>
+            <option>Sleepy</option>
+            <option>Bashful</option>
+            <option>Sneezy</option>
+            <option>Dopey</option>
+            <option>Doc</option>
+          </select>
+        </form>
+        <input type="submit" value="Submit" class="submitBtn" disabled />
+      </div>
+      <nav class="bottomMenu">
+        <div class="dropup">
+          <button class="dropbtn">Dropup One</button>
+          <div class="dropup-content">
+            <a href="#">This is an option</a>
+            <a href="#">This is another option</a>
+            <a href="#">And nother one</a>
+          </div>
+        </div>
+        <div class="dropup">
+          <button class="dropbtn">Dropup Two</button>
+          <div class="dropup-content">
+            <a href="#">This is an option</a>
+            <a href="#">This is another option</a>
+            <a href="#">And nother one</a>
+          </div>
+        </div>
+      </nav>
+    </main>
+    <!-- end of the main content -->
+
+    <br />
+    <footer class="footer footerMenu">
+      <h5>the place where the true fans of the comics come together</h5>
+      <p>&copy; Emilia Simulescu</p>
+    </footer>
+
+    <script>
+      var dropdown1 = document.getElementById("dropdown1");
+      var dropdown2 = document.getElementById("dropdown2");
+
+      judete = ["Alba", "Arad", "Cluj", "Hunedoara", "Vaslui", "Vrancea"];
+      oraseAlba = ["Abrud", "Aiud"];
+      oraseArad = [
+        "Arad",
+        "Pecica",
+        "Santana",
+        "Lipova",
+        "Ineu",
+        "Chisineu",
+        "Cris",
+        "Nadlac",
+        "Curtici",
+        "Pancota",
+        "Sebis",
+      ];
+      oraseHunedoara = ["Petrosani"];
+      oraseVaslui = ["Vaslui"];
+      oraseCluj = ["Cluj-Napoca", "Dej"];
+      oraseVrancea = ["Focsani"];
+
+      orase = [
+        oraseAlba,
+        oraseArad,
+        oraseCluj,
+        oraseHunedoara,
+        oraseVaslui,
+        oraseVrancea,
+      ];
+
+      for (var i = 0; i < judete.length; i++) {
+        var option = document.createElement("option");
+        option.setAttribute("value", i);
+        option.text = judete[i];
+        dropdown1.appendChild(option);
+      }
+
+      for (var j = 0; j < oraseAlba.length; j++) {
+        var option = document.createElement("option");
+        option.setAttribute("value", j);
+        option.text = oraseAlba[j];
+        dropdown2.appendChild(option);
+      }
+
+      function judetSelectat() {
+        selected = document.getElementById("dropdown1").value;
+        removeAll();
+        for (var j = 0; j < orase[selected].length; j++) {
+          var option = document.createElement("option");
+          option.setAttribute("value", j);
+          option.text = orase[selected][j];
+          dropdown2.appendChild(option);
+        }
+      }
+      function removeAll() {
+        while (dropdown2.options.length > 0) {
+          dropdown2.remove(0);
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <title>AllAboutComics</title>
+    <link rel="stylesheet" type="text/css" href="../style/style.css" />
+    <meta charset="utf-8" />
+
+    <link
+      href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css"
+      rel="stylesheet"
+    />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <script src="sliderUp.js"></script>
+  </head>
+
+  <body>
+    <div class="content">
+      <!-- header -->
+      <header>
+        <nav>
+          <ul class="navList">
+            <li class="leftLi">
+              <img id="logo" src="../assets/logo.jpg" alt="Logo" height="30" />
+            </li>
+            <li class="leftLi"><h2 id="AAC">All about comics</h2></li>
+            <li class="rightLi"><a href="login.html">Logout</a></li>
+            <li class="rightLi"><a href="discover.html">Discover</a></li>
+            <li class="rightLi"><a href="main-page.html">Main page</a></li>
+          </ul>
+        </nav>
+      </header>
+      <!-- end of the header -->
+
+      <!-- main content -->
+      <main>
+        <div class="searchDiv">
+          <label for="search">Need some help in finding a book? </label>
+          <input
+            id="searchTable"
+            type="search"
+            placeholder="Enter a title / author "
+          />
+          <button class="searchBtn">
+            <i class="icon-search"></i>
+          </button>
+        </div>
+        <form id="priceForm">
+          <input type="radio" id="radio1" name="radio" value="3" />
+          <label for="radio1"> 3 lei</label><br />
+          <input type="radio" id="radio2" name="radio" value="49" />
+          <label for="radio2"> 49 lei</label><br />
+          <input type="radio" id="radio3" name="radio" value="100" />
+          <label for="radio3"> oricat </label>
+
+          <div><button type="submit">Reset</button></div>
+        </form>
+
+        <table class="comicsTable">
+          <tr>
+            <th>Books</th>
+            <th>Title</th>
+            <th>Author(s)</th>
+            <th>Year</th>
+            <th>Publisher</th>
+            <th>Category</th>
+            <th>Price</th>
+          </tr>
+          <tbody id="tableContents">
+            <tr>
+              <td>
+                <div class="tooltip">
+                  <span class="tooltiptext">Best comic ever</span>
+
+                  <img class="coverImg" src="/assets/covers/spider-man.jpg" />
+                </div>
+              </td>
+              <td>Spider Man</td>
+              <td>Stan Lee</td>
+              <td>1956</td>
+              <td>MCU</td>
+              <td>Superhero</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="tooltip">
+                  <span class="tooltiptext">Will make you cry</span>
+                  <img class="coverImg" src="/assets/covers/download.png" />
+                </div>
+              </td>
+
+              <td>Maus</td>
+              <td>Art Spiegelman</td>
+              <td>2012</td>
+              <td>Grafic Art</td>
+              <td>Graphic novel</td>
+              <td>49</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="tooltip">
+                  <span class="tooltiptext"
+                    >Already read by tousands readers!</span
+                  >
+                  <img class="coverImg" src="/assets/covers/NarutoCover.jpg" />
+                </div>
+              </td>
+
+              <td>
+                <table class="innerTable">
+                  <tr>
+                    <th colspan="2">Naruto</th>
+                  </tr>
+                  <tr>
+                    <td>1 -</td>
+                    <td>72</td>
+                  </tr>
+                </table>
+              </td>
+              <td>Masashi Kishimoto</td>
+              <td>1999-2014</td>
+              <td>Shueisha</td>
+              <td>Manga</td>
+              <td>60</td>
+            </tr>
+            <tr>
+              <td>
+                <div class="tooltip">
+                  <span class="tooltiptext">You cannot miss this one!</span>
+                  <img class="coverImg" src="/assets/covers/Boruto.jpg" />
+                </div>
+              </td>
+              <td>
+                <table class="innerTable">
+                  <tr>
+                    <th colspan="2">Boruto</th>
+                  </tr>
+                  <tr>
+                    <td>1 -</td>
+                    <td>16</td>
+                  </tr>
+                </table>
+              </td>
+              <td>Masashi Kishimoto</td>
+              <td>2016-2022</td>
+              <td>Shueisha</td>
+              <td>Manga</td>
+              <td>61</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <!-- div containing the popup -->
+        <div class="content-popup">
+          <div onclick="togglePopup()" class="close-btn-popup">×</div>
+          <img id="showImage" class="popupImage" src="" />
+        </div>
+
+        <hr />
+        <h2>Products</h2>
+        <p>
+          Type something in the input field to search for specific products:
+        </p>
+
+        <input id="myInput" type="text" placeholder="Search.." />
+        <ul id="productsList">
+          <li>First item</li>
+          <li>Second item</li>
+          <li>Third item</li>
+          <li>Fourth</li>
+        </ul>
+
+        <select name="products" id="products">
+          <option>First item</option>
+          <option>Second item</option>
+          <option>third</option>
+          <option>fourth</option>
+          <option>Five</option>
+        </select>
+        <hr />
+
+        <div class="tabs">
+          <ul class="tab-links">
+            <li class="active"><a href="#tab1">Descriere</a></li>
+            <li><a href="#tab2">Informatii aditionale</a></li>
+            <li><a href="#tab3">Recomandari</a></li>
+          </ul>
+
+          <div class="tab-content">
+            <div id="tab1" class="tab">
+              
+              <h3>
+              <strong>GWEN STACY: SPIDER-WOMAN!</strong></h3>
+              <p>
+                Published: April 06, 2022
+                <br />
+                <hr> In one universe, it
+                wasn't Peter Parker bitten by the radioactive Spider, but Gwen
+                Stacy! She's smart, charming and can lift a car-- Just don't
+                tell her Police Chief father! How is she involved in
+                Spider-Verse? Seeds of AMAZING SPIDER-MAN #9 are planted here!
+              </p>
+            </div>
+
+            <div id="tab2" class="tab">
+              <video class="video" controls autoplay>
+                <source
+                  src="../assets/videos/Bobby McFerrin - Don't Worry Be Happy (Official Music Video).mp4"
+                  type="video/mp4"
+                />
+                Error
+              </video>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ac odio tempor orci dapibus ultrices. Orci dapibus ultrices in iaculis. Aenean et tortor at risus viverra adipiscing. Pellentesque pulvinar pellentesque habitant morbi. Vulputate odio ut enim blandit volutpat maecenas volutpat. Ligula ullamcorper malesuada proin libero nunc consequat interdum varius sit. Et tortor consequat id porta nibh venenatis cras. Pellentesque eu tincidunt tortor aliquam nulla facilisi cras fermentum odio. Sit amet mattis vulputate enim nulla. Et sollicitudin ac orci phasellus egestas. Ut porttitor leo a diam sollicitudin tempor id eu. Id cursus metus aliquam eleifend mi in nulla. Sed vulputate mi sit amet mauris commodo. Accumsan in nisl nisi scelerisque eu ultrices vitae auctor eu. Sit amet aliquam id diam maecenas ultricies mi eget mauris.
+
+               
+                <hr>
+                Mauris vitae ultricies leo integer malesuada nunc vel risus. Facilisis gravida neque convallis a cras. Vel eros donec ac odio tempor orci dapibus. Ut sem viverra aliquet eget sit amet tellus cras. Scelerisque eu ultrices vitae auctor eu augue. Tincidunt ornare massa eget egestas purus viverra accumsan in nisl. Mattis molestie a iaculis at erat pellentesque adipiscing. Est lorem ipsum dolor sit amet consectetur adipiscing. Arcu felis bibendum ut tristique. Enim blandit volutpat maecenas volutpat. Arcu non odio euismod lacinia at quis risus. Egestas purus viverra accumsan in nisl nisi scelerisque. Sem integer vitae justo eget magna fermentum iaculis. Sed viverra tellus in hac. Diam sollicitudin tempor id eu nisl nunc. Tincidunt eget nullam non nisi est sit amet facilisis magna. Aliquam ultrices sagittis orci a scelerisque purus semper. Neque sodales ut etiam sit. Nulla aliquet porttitor lacus luctus accumsan tortor posuere ac.
+                <hr>
+                Id porta nibh venenatis cras sed. Dignissim enim sit amet venenatis urna. Vulputate sapien nec sagittis aliquam malesuada. Sed tempus urna et pharetra pharetra massa. Elementum pulvinar etiam non quam. Integer enim neque volutpat ac. Tortor condimentum lacinia quis vel eros donec ac odio tempor. Arcu cursus vitae congue mauris rhoncus. Cras fermentum odio eu feugiat pretium nibh. Urna nec tincidunt praesent semper feugiat nibh sed pulvinar proin. Neque volutpat ac tincidunt vitae semper quis lectus. Nisl condimentum id venenatis a condimentum vitae sapien. A iaculis at erat pellentesque. Varius quam quisque id diam vel quam elementum. Sapien pellentesque habitant morbi tristique senectus et netus et malesuada. Odio ut enim blandit volutpat maecenas. Euismod quis viverra nibh cras pulvinar mattis nunc sed blandit.
+              
+              </p>
+            </div>
+
+            <div id="tab3" class="tab">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ac odio tempor orci dapibus ultrices. Orci dapibus ultrices in iaculis. Aenean et tortor at risus viverra adipiscing. Pellentesque pulvinar pellentesque habitant morbi. Vulputate odio ut enim blandit volutpat maecenas volutpat. Ligula ullamcorper malesuada proin libero nunc consequat interdum varius sit. Et tortor consequat id porta nibh venenatis cras. Pellentesque eu tincidunt tortor aliquam nulla facilisi cras fermentum odio. Sit amet mattis vulputate enim nulla. Et sollicitudin ac orci phasellus egestas. Ut porttitor leo a diam sollicitudin tempor id eu. Id cursus metus aliquam eleifend mi in nulla. Sed vulputate mi sit amet mauris commodo. Accumsan in nisl nisi scelerisque eu ultrices vitae auctor eu. Sit amet aliquam id diam maecenas ultricies mi eget mauris.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div id="jq_slider">
+          <a href="#jq_slider" class="go_next">v</a>
+          <a href="#jq_slider" class="go_prev">^</a>
+          <ul>
+            <li>
+              <img src="../assets/slider/slide1.jpg" alt="img1" title="img1" />
+            </li>
+            <li>
+              <img src="../assets/slider/slide2.jpg" alt="img2" title="img2" />
+            </li>
+            <li>
+              <img src="../assets/slider/slide3.jpg" alt="img3" title="img3" />
+            </li>
+            <li>
+              <img src="../assets/slider/slide4.jpg" alt="img4" title="img4" />
+            </li>
+            <li>
+              <video class="video" controls autoplay>
+                <source
+                  src="../assets/videos/3SecondsVideo.mp4"
+                  type="video/mp4"
+                />
+                Error
+              </video>
+            </li>
+            <li>
+              <video class="video" controls>
+                <source
+                  src="../assets/videos/Bobby McFerrin - Don't Worry Be Happy (Official Music Video).mp4"
+                  type="video/mp4"
+                />
+                Error
+              </video>
+            </li>
+          </ul>
+        </div>
+        <div class="auto_slider">
+          <input type="checkbox" id="autoOptionCheckbox" />
+          <label for="checkbox">Auto Slider Option</label>
+          <span class="sec">
+            <select id="selectSeconds">
+              <option value="1000">1 sec</option>
+              <option value="2000">2 sec</option>
+              <option value="3000">3 sec</option>
+              <option value="10000" selected>10 sec</option>
+            </select>
+          </span>
+        </div>
+
+        <p>something</p>
+      </main>
+      <!-- end of the main content -->
+    </div>
+    <footer class="footer">
+      <h5>the place where the true fans of the comics come together</h5>
+      <p>&copy; Emilia Simulescu</p>
+    </footer>
+    <script>
+      // SEARCH DROPDOWN
+
+      $(document).ready(function () {
+        $("#myInput").on("keyup", function () {
+          var value = $(this).val().toLowerCase();
+          $("#products option").filter(function () {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+          });
+        });
+      });
+
+      $(document).ready(function () {
+        $("#myInput").on("keyup", function () {
+          var value = $(this).val().toLowerCase();
+          $("#productsList li").filter(function () {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+          });
+        });
+      });
+
+      //SEARCH IN TABEL
+
+      $(document).ready(function () {
+        $("#searchTable").on("keyup", function () {
+          var value = $(this).val().toLowerCase();
+          $("#tableContents tr").filter(function () {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+          });
+        });
+      });
+
+      $(document).ready(function () {
+        $('input[type="radio"]').change(function () {
+          var radio = $('input[name="radio"]:checked').prop("value") || "";
+
+          if (radio == "inactive") {
+            // Do nothing as any of three condition says show all
+            // And currently we all rows selected in trs
+          } else {
+            if (radio != "" && radio != "inactive") {
+              var value = $('input[name="radio"]:checked').prop("value");
+              console.log("radio=", radio);
+              console.log("value=", value);
+              if (value == "3") {
+                $("#tableContents tr").filter(function () {
+                  $(this).toggle(
+                    $(this).text().toLowerCase().indexOf(value) > -1
+                  );
+                });
+              }
+              if (value == "49") {
+                $("#tableContents tr").filter(function () {
+                  $(this).toggle(
+                    $(this).text().toLowerCase().indexOf(value) > -1
+                  );
+                });
+              }
+              if (value == "100") {
+                $("tr").show();
+              }
+            }
+          }
+        });
+
+        $("#reset").on("click", function () {
+          $(":radio").prop("checked", false);
+          $("tr").show();
+        });
+      });
+    </script>
+  </body>
+</html>

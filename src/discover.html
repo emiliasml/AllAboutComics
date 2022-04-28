@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <title>AllAboutComics</title>
+    <link rel="stylesheet" type="text/css" href="../style/style.css" />
+    <meta charset="utf-8" />
+
+    <link
+      href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css"
+      rel="stylesheet"
+    />
+    <script type="text/javascript" src="../scripts/script.js"></script>
+  </head>
+
+  <body>
+    <div class="content">
+      <!-- header -->
+      <header>
+        <nav>
+          <ul class="navList">
+            <li class="leftLi">
+              <img id="logo" src="../assets/logo.jpg" alt="Logo" height="30" />
+            </li>
+            <li class="leftLi"><h2 id="AAC">All about comics</h2></li>
+            <li class="rightLi"><a href="login.html">Login</a></li>
+            <li class="rightLi"><a href="signup.html">Signup</a></li>
+            <li class="rightLi"><a href="main-page.html">Main page</a></li>
+          </ul>
+        </nav>
+      </header>
+      <!-- end of the header -->
+
+      <!-- main content -->
+      <main>
+        <div class="containerS">
+          <ul id="slides">
+            <li class="slide showing"></li>
+            <li class="slide"></li>
+            <li class="slide"></li>
+          </ul>
+          <span class="sec">
+            <select id="selectSeconds" onchange="changeSeconds()">
+              <option value="opt1">1 sec</option>
+              <option value="opt2">2 sec</option>
+              <option value="opt3">3 sec</option>
+            </select>
+          </span>
+          <div class="buttons">
+            <!-- <button class="controls" id="previous">&lt;</button> -->
+
+            <button class="controls" id="pause">&#10074;&#10074;</button>
+
+            <!-- <button class="controls" id="next">&gt;</button> -->
+          </div>
+        </div>
+
+        <div>
+          <section>
+            <h2>Categories</h2>
+            <p>
+              <b>Comics</b> have been written in a variety of styles and genres,
+              to suit every taste. <br />Here are just some of the many genres
+              to be found in today's comics
+            </p>
+          </section>
+          <ol type="1">
+            <li>
+              <strong>Comics</strong>
+              <ol>
+                <li>Superhero</li>
+                <li>Slice-of-Life</li>
+                <li>Humor</li>
+                <li>Non-fiction</li>
+                <li>Science-Fiction/Fantasy</li>
+                <li>Horror</li>
+              </ol>
+            </li>
+            <li>
+              <strong>Graphic novels</strong>
+              <ol start="7">
+                <li>Manga</li>
+                <li>Superhero Stories</li>
+                <li>Non-superhero Stories</li>
+                <li>Personal Narratives</li>
+                <li>Non-fiction</li>
+              </ol>
+            </li>
+            <li>
+              <strong>Manga</strong>
+              <ol start="12">
+                <li>Action</li>
+                <li>Adventure</li>
+                <li>Comedy</li>
+                <li>Drama</li>
+                <li>Cooking</li>
+                <li>Horror</li>
+                <li>Slice of life</li>
+                <li>Fantasy</li>
+                <li>Harem/Reverse harem</li>
+                <li>Magic</li>
+                <li>Supernatural</li>
+                <li>Mystery</li>
+                <li>Psychological</li>
+                <li>Romance</li>
+                <li>Sci-Fi</li>
+                <li>Sports</li>
+              </ol>
+            </li>
+          </ol>
+        </div>
+
+        <div class="searchDiv">
+          <label for="search">Need some help in finding a book? </label>
+          <input
+            id="search"
+            type="search"
+            placeholder="Enter a title / author "
+          />
+          <button class="searchBtn">
+            <i class="icon-search"></i>
+          </button>
+        </div>
+
+        <table class="comicsTable">
+          <tr>
+            <th>Books</th>
+            <th>Title</th>
+            <th>Author(s)</th>
+            <th>Year</th>
+            <th>Publisher</th>
+            <th>Category</th>
+          </tr>
+          <tr>
+            <td>
+              <div class="tooltip">
+                <span class="tooltiptext">Best comic ever</span>
+                <a href="product.html"
+                  ><img class="coverImg" src="/assets/covers/spider-man.jpg"
+                /></a>
+              </div>
+            </td>
+            <td>Spider Man</td>
+            <td>Stan Lee</td>
+            <td>1956</td>
+            <td>MCU</td>
+            <td>Superhero</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="tooltip">
+                <span class="tooltiptext">Will make you cry</span>
+                <img class="coverImg" src="/assets/covers/download.png" />
+              </div>
+            </td>
+
+            <td>Maus</td>
+            <td>Art Spiegelman</td>
+            <td>2012</td>
+            <td>Grafic Art</td>
+            <td>Graphic novel</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="tooltip">
+                <span class="tooltiptext"
+                  >Already read by tousands readers!</span
+                >
+                <img class="coverImg" src="/assets/covers/NarutoCover.jpg" />
+              </div>
+            </td>
+
+            <td>
+              <table class="innerTable">
+                <tr>
+                  <th colspan="2">Naruto</th>
+                </tr>
+                <tr>
+                  <td>1 -</td>
+                  <td>72</td>
+                </tr>
+              </table>
+            </td>
+            <td rowspan="2">Masashi Kishimoto</td>
+            <td>1999-2014</td>
+            <td rowspan="2">Shueisha</td>
+            <td rowspan="2">Manga</td>
+          </tr>
+          <tr>
+            <td>
+              <div class="tooltip">
+                <span class="tooltiptext">You cannot miss this one!</span>
+                <img class="coverImg" src="/assets/covers/Boruto.jpg" />
+              </div>
+            </td>
+            <td>
+              <table class="innerTable">
+                <tr>
+                  <th colspan="2">Boruto</th>
+                </tr>
+                <tr>
+                  <td>1 -</td>
+                  <td>16</td>
+                </tr>
+              </table>
+            </td>
+            <td>2016-2022</td>
+          </tr>
+        </table>
+        <br />
+        <hr />
+        <table id="charactersTable" class="comicsTable">
+          <tr>
+            <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
+            <th onclick="sortTable(0, 'charactersTable')">No</th>
+            <th onclick="sortTable(1, 'charactersTable')">
+              Name of the character
+            </th>
+          </tr>
+        </table>
+        <br />
+        <hr />
+        <table id="filmsTable" class="comicsTable">
+          <tr>
+            <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
+            <th onclick="sortTable(0, 'filmsTable')">No</th>
+            <th onclick="sortTable(1, 'filmsTable')">Name</th>
+            <th onclick="sortTable(2, 'filmsTable')">Year</th>
+          </tr>
+        </table>
+        <br />
+        <hr />
+
+        <p>something something something something</p>
+      </main>
+      <!-- end of the main content -->
+    </div>
+    <footer class="footer">
+      <h5>the place where the true fans of the comics come together</h5>
+      <p>&copy; Emilia Simulescu</p>
+    </footer>
+
+    <script>
+      var tbl1 = document.getElementById("filmsTable");
+      var tbl2 = document.getElementById("charactersTable");
+
+      characters = [
+        [1, "Spider-Man"],
+        [2, "Hulk"],
+        [3, "Thor"],
+        [4, "Captain America"],
+        [5, "Doctor Strange"],
+        [6, "Iron Man"],
+      ];
+
+      films = [
+        [1, "Iron Man", 2008],
+        [2, "Hulk", 2008],
+        [3, "Thor", 2011],
+        [4, "Captain America", 2011],
+        [5, "The Avengers", 2012],
+      ];
+
+      for (let i = 0; i < 5; i++) {
+        const tr = tbl1.insertRow();
+        for (let j = 0; j < 3; j++) {
+          const td = tr.insertCell();
+          td.appendChild(document.createTextNode(films[i][j]));
+          //  td.appendChild(document.createTextNode(`Cell I${i}/J${j}`));
+        }
+      }
+      for (let i = 0; i < 5; i++) {
+        const tr = tbl2.insertRow();
+        for (let j = 0; j < 2; j++) {
+          const td = tr.insertCell();
+          td.appendChild(document.createTextNode(characters[i][j]));
+          //  td.appendChild(document.createTextNode(`Cell I${i}/J${j}`));
+        }
+      }
+      function sortTable(n, tableID) {
+        var table,
+          rows,
+          switching,
+          i,
+          x,
+          y,
+          shouldSwitch,
+          dir,
+          switchcount = 0;
+        table = document.getElementById(tableID);
+        switching = true;
+        dir = "asc";
+        while (switching) {
+          switching = false;
+          rows = table.rows;
+          /*Loop through all table rows (except the
+      first, which contains table headers):*/
+          for (i = 1; i < rows.length - 1; i++) {
+            shouldSwitch = false;
+            x = rows[i].getElementsByTagName("TD")[n];
+            y = rows[i + 1].getElementsByTagName("TD")[n];
+            if (dir == "asc") {
+              if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+                shouldSwitch = true;
+                break;
+              }
+            } else if (dir == "desc") {
+              if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+                shouldSwitch = true;
+                break;
+              }
+            }
+          }
+          if (shouldSwitch) {
+            rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+            switching = true;
+            switchcount++;
+          } else {
+            /*If no switching has been done AND the direction is "asc",
+        set the direction to "desc" and run the while loop again.*/
+            if (switchcount == 0 && dir == "asc") {
+              dir = "desc";
+              switching = true;
+            }
+          }
+        }
+      }
+
+      var controls = document.querySelectorAll(".controls");
+      for (var i = 0; i < controls.length; i++) {
+        controls[i].style.display = "inline-block";
+      }
+
+      var interval = 1000;
+      var slides = document.querySelectorAll("#slides .slide");
+      var currentSlide = 0;
+      var slideInterval = setInterval(nextSlide, interval);
+
+      function changeSeconds() {
+        selected = document.getElementById("selectSeconds").value;
+        if (selected == "opt1") interval = 1000;
+        if (selected == "opt2") interval = 2000;
+        if (selected == "opt3") interval = 3000;
+        pauseSlideshow();
+        playSlideshow();
+      }
+
+      function nextSlide() {
+        goToSlide(currentSlide + 1);
+      }
+
+      function previousSlide() {
+        goToSlide(currentSlide - 1);
+      }
+
+      function goToSlide(n) {
+        slides[currentSlide].className = "slide";
+        currentSlide = (n + slides.length) % slides.length;
+        slides[currentSlide].className = "slide showing";
+      }
+
+      var playing = true;
+      var pauseButton = document.getElementById("pause");
+
+      function pauseSlideshow() {
+        pauseButton.innerHTML = "&#9658;"; // play character
+        playing = false;
+        console.log(interval);
+
+        clearInterval(slideInterval);
+      }
+
+      function playSlideshow() {
+        pauseButton.innerHTML = "&#10074;&#10074;"; // pause character
+        playing = true;
+        console.log(interval);
+
+        slideInterval = setInterval(nextSlide, interval);
+      }
+
+      pauseButton.onclick = function () {
+        if (playing) {
+          pauseSlideshow();
+        } else {
+          playSlideshow();
+        }
+      };
+
+      var next = document.getElementById("next");
+      var previous = document.getElementById("previous");
+
+      next.onclick = function () {
+        pauseSlideshow();
+        nextSlide();
+      };
+      previous.onclick = function () {
+        pauseSlideshow();
+        previousSlide();
+      };
+    </script>
+  </body>
+</html>
